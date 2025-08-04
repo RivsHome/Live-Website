@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Member Login | RIVS Home & Lawn Care</title>
+
+  <!-- Global & login-page styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="login.css" />
+
+  <!-- FontAwesome (for menu icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <!-- Mobile Header -->
+  <div class="mobile-header">
+    <div class="mobile-header-top">
+      <div class="burger-placeholder"></div>
+      <div class="mobile-logo">
+        <a href="index.html"><img src="assets/logo.png" alt="RIVS Logo" /></a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+    <div class="mobile-header-ctas">
+      <a href="login.html" class="cta-button">Login</a>
+    </div>
+  </div>
+
+  <!-- Desktop Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a href="index.html"><img src="assets/logo.png" alt="RIVS Logo" /></a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- LOGIN PAGE CONTENT -->
+  <main class="login-page">
+    <!-- Google Sign-In Button -->
+    <div id="google-signin-button"></div>
+
+    <form id="loginForm" class="form-container">
+      <h2>Member Login</h2>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+
+      <button type="submit" class="cta-button">Log In</button>
+      <p class="form-footer"><a href="signup.html">New? Sign up here.</a></p>
+    </form>
+  </main>
+
+  <footer><p> 2025 Rivs Home. All rights reserved.</p></footer>
+
+  <script>
+    // Initialize Google Sign-In
+    google.accounts.id.initialize({
+      client_id: 'YOUR_GOOGLE_CLIENT_ID',
+      callback: handleGoogleCredentialResponse,
+      ux_mode: 'popup'
+    });
+
+    // Render the Google Sign-In button
+    google.accounts.id.renderButton(
+      document.getElementById('google-signin-button'),
+      { theme: 'outline', size: 'large', width: 300 }
+    );
+
+    // Handle credential response
+    function handleGoogleCredentialResponse(response) {
+      fetch('/api/auth/google', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id_token: response.credential })
+      })
+      .then(r => {
+        if (!r.ok) throw new Error('Google login failed');
+        return r.json();
+      })
+      .then(() => window.location.href = 'members-area.html')
+      .catch(err => alert(err.message));
+    }
+
+    // Fallback email/password login
+    document.getElementById('loginForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const email = e.target.email.value;
+      const pass  = e.target.password.value;
+      try {
+        // Replace this with real auth call
+        await fakeAuth.signIn(email, pass);
+        window.location.href = 'members-area.html';
+      } catch(err) {
+        alert('Login failed: ' + err.message);
+      }
+    });
+
+    // Example placeholder for auth
+    const fakeAuth = {
+      async signIn(e,p) {
+        if (e==='member@example.com' && p==='password') return;
+        throw new Error('Invalid credentials');
+      }
+    };
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

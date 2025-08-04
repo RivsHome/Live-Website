@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Estimate | Rivs Home</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" /> 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="service-style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+
+  <!-- Mobile Menu Button -->
+  <!-- Mobile Menu Button -->
+  <div class="mobile-header">
+    <div class="burger-placeholder"></div>
+  
+    <div class="mobile-logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="RIVS Logo" />
+      </a>
+    </div>
+  
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+  
+  <!-- CTAs below the header -->
+  <div class="mobile-header-ctas">
+    <a href="free-estimate.html" class="cta-button">Free Estimate</a>
+    <a href="tel:+18609996408" class="cta-button">Call Us</a>
+  </div>
+
+<!-- Full-Screen Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="mobile-menu-header">
+    <img src="assets/logo.png" alt="RIVS Logo" />
+    <div class="mobile-menu-close" onclick="toggleMenu()">✕</div>
+  </div>
+  <ul class="mobile-menu-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="index.html#about-us"><i class="fas fa-info-circle"></i> About</a></li>
+    <li><a href="index.html#services"><i class="fas fa-tools"></i> Services</a></li>
+    <li><a href="index.html#coverage-area"><i class="fas fa-map-marker-alt"></i> Coverage Area</a></li>
+    <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+  </ul>  
+</div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html"><img src="assets/logo.png" alt="RIVS Logo" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about-us">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <div class="nav-contact">
+          <a href="tel:+18609996408">(860) 999-6408</a>
+        </div>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="form-hero">
+    <h1>Get Your Free Estimate</h1>
+    <p>Tell us about your project and we’ll get back to you ASAP.</p>
+  </header>
+
+  <section class="estimate-form-section">
+    <form action="https://formspree.io/f/xzzrpbwn" method="POST" class="estimate-form">
+      <input type="hidden" name="_redirect" value="/thank-you.html">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" id="phone" required />
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="123 Main St, Anytown, CT"
+          required
+        />
+      </div>
+    
+
+      <label for="service">Type of Service</label>
+      <select name="service" id="service" required>
+        <option value="">Select one</option>
+        <option>General Plumbing</option>
+        <option>Handyman</option>
+        <option>Sprinklers</option>
+        <option>Gutters</option>
+        <option>Electrical</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Project Details</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <div class="consent-disclaimer">
+        <p>By submitting this form, you agree to be contacted by phone, text, or email regarding your inquiry.</p>
+      </div>
+
+      <button type="submit" class="cta-button">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Rivs Home. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle('menu-open');
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  
+    // auto‐close when a link is clicked (optional)
+    document.querySelectorAll('.mobile-menu-links a').forEach(link =>
+      link.addEventListener('click', () => {
+        document.getElementById("mobileMenu").classList.remove("show");
+      })
+    );
+  </script>
+  
+
+</body>
+</html>

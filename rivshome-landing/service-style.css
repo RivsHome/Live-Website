@@ -1,0 +1,424 @@
+/* ============================= */
+/*        Global Styles         */
+/* ============================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-logo img {
+  margin-right: 0;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #0077c0;
+}
+
+.hero {
+  margin-top: 90px; /* so content doesn't hide under navbar */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  width: auto;
+  max-width: none;
+}
+
+.nav-contact {
+  margin-left: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.nav-contact a {
+  text-decoration: none;
+  color: #0077c0;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: 2px solid #0077c0;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+.nav-contact a:hover {
+  background-color: #0077c0;
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  min-width: 180px;
+  padding: 10px 0;
+}
+.dropdown-menu li {
+  display: block;
+  width: 100%;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.dropdown-menu li a:hover {
+  background-color: #0077c0;
+  color: white;
+}
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ============================= */
+/*     Service Header Styles     */
+/* ============================= */
+.service-header {
+  background-color: #0077c0;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.service-header h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.service-header h2,
+.service-header p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+.service-header h3 {
+  display: none;
+}
+
+/* ============================= */
+/*       CTA Button Styles       */
+/* ============================= */
+.cta-button {
+  background-color: #e1b23f;
+  color: #000;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background-color: #cf9e2b;
+}
+.centered-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* ============================= */
+/*   Service List Section        */
+/* ============================= */
+.service-list-section {
+  background-color: #fefefe;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: radial-gradient(circle, rgba(45,98,158,0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.service-list-section h2 {
+  font-size: 2.8rem;
+  color: #2f6da1;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+.service-columns {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.service-columns ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.service-columns li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 20px;
+}
+.service-columns li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0077c0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ============================= */
+/*  Service Cards (Grid Setup)   */
+/* ============================= */
+.service-header .service-cards,
+.service-list-section .service-cards {
+  width: 60%;
+  max-width: 700px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background: #2d629e;
+  color: #fff; 
+  font-size: 1.5rem;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.service-card .centered-button {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.service-list-section .section-title {
+  width: 60%;
+  max-width: 700px;
+  margin: 2rem auto 1rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #2d629e;
+  margin-bottom: 55px;
+}
+.service-list-section .service-card > h2 {
+  display: none;
+}
+
+/* ============================= */
+/*      Mobile Optimizations     */
+/* ============================= */
+@media (max-width: 768px) {
+  /* 1) Hide the desktop navbar */
+  .navbar {
+    display: none !important;
+  }
+
+  /* 2) Fixed logo + hamburger bar */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    z-index: 1000;
+  }
+  .mobile-header .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* 3) CTA bar directly under the header */
+  .mobile-header-ctas {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background: #2f6da1;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+  }
+  .mobile-header-ctas .cta-button {
+    flex: none;
+    width: calc(50% - 0.5rem);
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* 4) Push page content under both bars */
+  body {
+    padding-top: 112px !important; /* 56px + 56px */
+  }
+
+  /* 5) ——— L A N D I N G   P A G E   M O B I L E   M E N U ——— */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+    padding-top: 80px; /* room for header+CTAs */
+  }
+  .mobile-menu.show {
+    display: flex;
+  }
+
+  .mobile-menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .mobile-menu-header img {
+    height: 50px;
+  }
+
+  .mobile-menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 80%;
+  }
+  .mobile-menu-links li a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .mobile-menu-links li a i {
+    font-size: 1.6rem;
+  }
+
+  /* 6) Collapse cards to one column */
+  .service-header .service-cards,
+  .service-list-section .service-cards {
+    width: 90%;
+    margin: 1.5rem auto;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* 7) Other mobile tweaks */
+  .service-header {
+    padding-bottom: 80px;
+  }
+  .cta-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+  .service-card p {
+    font-size: 0.95rem; line-height: 1.4;
+  }
+  .service-list-section .service-card p {
+    font-size: 1.6rem; line-height: 1.4;
+  }
+  .service-list-section .section-title {
+    font-size: 2.5rem;
+    width: 90%;
+    margin-bottom: 5rem;
+  }
+  .service-header h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+  .mobile-header-ctas .cta-button,
+  .mobile-header-ctas .cta-button:visited,
+  .mobile-header-ctas .cta-button:active,
+  .mobile-header-ctas .cta-button:focus {
+    background-color: #E1B23F !important;
+    color: #fff !important;
+    border: none !important;
+    text-decoration: none !important;
+  }
+  .mobile-header-ctas a.cta-button,
+  .mobile-header-ctas a.cta-button:visited,
+  .mobile-header-ctas a.cta-button:active,
+  .mobile-header-ctas a.cta-button:focus {
+    background: #E1B23F !important;
+    color: #fff !important;
+    border: none !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.menu-open .navbar {
+    display: none !important;
+    background: red !important;
+    border: 10px solid yellow !important;
+    color: #fff !important;
+    opacity: 0.2 !important;
+    z-index: 0 !important;
+  }
+}
+

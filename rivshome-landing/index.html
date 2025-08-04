@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rivs Home</title>
+
+  <!-- Your own stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="service-style.css" />
+
+  <!-- Font Awesome with SRI + crossorigin -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+  />
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src
+      'self'
+      https://cdnjs.cloudflare.com
+      https://www.tiktok.com
+      https://*.tiktokcdn.com
+      https://*.tikcdn.com
+      https://*.tiktokcdn-us.com;
+    style-src
+      'self'
+      'unsafe-inline'
+      https://cdnjs.cloudflare.com
+      https://*.tiktokcdn.com
+      https://*.tikcdn.com
+      https://*.tiktokcdn-us.com;
+    font-src
+      'self'
+      https://cdnjs.cloudflare.com
+      https://*.tiktokcdn.com
+      https://*.tikcdn.com
+      https://*.tiktokcdn-us.com;
+    img-src
+      'self'
+      data:
+      https://*.tiktokcdn.com
+      https://*.tikcdn.com
+      https://*.tiktokcdn-us.com;
+    connect-src
+      'self'
+      https://api.mistral.ai
+      https://www.tiktok.com
+      https://*.tiktokcdn.com
+      https://*.tikcdn.com
+      https://*.tiktokcdn-us.com
+      https://mcs.tiktokv.us;
+    frame-src
+      'self'
+      https://www.tiktok.com
+      https://*.tiktokcdn.com
+      https://*.tiktokcdn-us.com;
+  ">
+
+  <!-- Prevent clickjacking -->
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+
+  <!-- Don’t leak referrers -->
+  <meta name="referrer" content="no-referrer" />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <style>
+@media (max-width: 768px) {
+  .mobile-header-ctas a.cta-button,
+  .mobile-header-ctas a.cta-button:visited,
+  .mobile-header-ctas a.cta-button:active,
+  .mobile-header-ctas a.cta-button:focus {
+    background: #E1B23F !important;
+    color: #fff !important;
+    border: none !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 32px !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Mobile Menu Button -->
+  <div class="mobile-header">
+    <div class="burger-placeholder"></div>
+    <div class="mobile-logo">
+      <a href="index.html"><img src="assets/logo.png" alt="RIVS Logo" /></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+   <!-- CTAs below the header -->
+   <div class="mobile-header-ctas">
+    <a href="free-estimate.html" class="cta-button">Free Estimate</a>
+    <a href="tel:+18609996408" class="cta-button">Call Us</a>
+  </div>
+
+  <!-- Full-Screen Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <img src="assets/logo.png" alt="RIVS Logo" />
+      <div class="mobile-menu-close" onclick="toggleMenu()">✕</div>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about-us"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#services"><i class="fas fa-tools"></i> Services</a></li>
+      <li><a href="#coverage-area"><i class="fas fa-map-marker-alt"></i> Coverage Area</a></li>
+      <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ==== Your original Navbar, Hero, Services, etc. all go here, unchanged ==== -->
+
+   <!-- Navigation Bar -->
+   <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="assets/logo.png" alt="RIVS Logo" />
+      </div>
+  
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#services">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="plumbing.html">Plumbing</a></li>
+            <li><a href="handyman.html">Handyman</a></li>
+            <li><a href="sprinklers.html">Sprinkler System</a></li>
+            <li><a href="gutters.html">Gutter Services</a></li>
+            <li><a href="electrical.html">Electrical</a></li>
+          </ul>
+        </li>
+        <li><a href="#about-us">About</a></li>
+        <li><a href="#coverage-area">Coverage Area</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+  
+      <div class="nav-contact">
+        <a href="tel:+18609996408">(860) 999–6408</a>
+      </div>
+    </div>
+  </nav>
+  
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Trusted Home Experts in Connecticut</h1>
+      <p class="hero-subtitle">Keeping your home running smoothly and looking its best, inside and out.</p>
+      <div class="hero-cta-container">
+        <a href="free-estimate.html" class="cta-button hero-btn">Get a Free Estimate!</a>
+      </div>
+      <div class="mobile-bottom-spacer"></div>
+    </div>
+  </header>
+
+  <section class="services-section" id="services">
+    <h2>Our Services</h2>
+    <p class="section-description">We provide a wide range of reliable home improvement solutions for homeowners across Connecticut.</p>
+    
+    
+
+<div class="services desktop-only">
+  <div class="service">
+    <img src="assets/plumbing.png" alt="Plumbing Icon" class="service-icon" />
+    <div>General Plumbing</div>
+    <a href="plumbing.html" class="learn-more-btn">Learn More</a>
+    <p class="service-description">Fixing leaks, unclogging drains, and installing plumbing systems.</p>
+  </div>
+  <div class="service">
+    <img src="assets/handyman.png" alt="Handyman Icon" class="service-icon" />
+    <div>Handyman Services</div>
+    <a href="handyman.html" class="learn-more-btn">Learn More</a>
+    <p class="service-description">From repairs to installations, we handle all your home maintenance needs.</p>
+  </div>
+  <div class="service">
+    <img src="assets/sprinkler.png" alt="Sprinkler Icon" class="service-icon" />
+    <div>Sprinkler System</div>
+    <a href="sprinklers.html" class="learn-more-btn">Learn More</a>
+    <p class="service-description">Installation and maintenance of efficient irrigation systems.</p>
+  </div>
+  <div class="service">
+    <img src="assets/gutters.png" alt="Gutters Icon" class="service-icon" />
+    <div>Gutter Services</div>
+    <a href="gutters.html" class="learn-more-btn">Learn More</a>
+    <p class="service-description">Gutter cleaning and installation to prevent water damage.</p>
+  </div>
+  <div class="service">
+    <img src="assets/electrical.png" alt="Electrical Icon" class="service-icon" />
+    <div>Electrical Services</div>
+    <a href="electrical.html" class="learn-more-btn">Learn More</a>
+    <p class="service-description">Safe and efficient electrical upgrades, repairs, and installations.</p>
+  </div>
+</div>
+
+
+<!-- Mobile carousel + dots wrapper -->
+<div class="mobile-carousel-wrapper">
+  <!-- Swipeable cards -->
+  <div class="mobile-carousel">
+    <div class="service-card">
+      <img src="assets/plumbing.png" alt="Plumbing Icon" class="service-icon" />
+      <div>General Plumbing</div>
+      <a href="plumbing.html" class="learn-more-btn">Learn More</a>
+      <p class="service-description">
+        Fixing leaks, unclogging drains, and installing plumbing systems.
+      </p>
+    </div>
+    <div class="service-card">
+      <img src="assets/handyman.png" alt="Handyman Icon" class="service-icon" />
+      <div>Handyman Services</div>
+      <a href="handyman.html" class="learn-more-btn">Learn More</a>
+      <p class="service-description">
+        From repairs to installations, we handle all your home maintenance needs.
+      </p>
+    </div>
+    <div class="service-card">
+      <img src="assets/sprinkler.png" alt="Sprinkler Icon" class="service-icon" />
+      <div>Sprinkler System</div>
+      <a href="sprinklers.html" class="learn-more-btn">Learn More</a>
+      <p class="service-description">
+        Installation and maintenance of efficient irrigation systems.
+      </p>
+    </div>
+    <div class="service-card">
+      <img src="assets/gutters.png" alt="Gutters Icon" class="service-icon" />
+      <div>Gutter Services</div>
+      <a href="gutters.html" class="learn-more-btn">Learn More</a>
+      <p class="service-description">
+        Gutter cleaning and installation to prevent water damage.
+      </p>
+    </div>
+    <div class="service-card">
+      <img src="assets/electrical.png" alt="Electrical Icon" class="service-icon" />
+      <div>Electrical Services</div>
+      <a href="electrical.html" class="learn-more-btn">Learn More</a>
+      <p class="service-description">
+        Safe and efficient electrical upgrades, repairs, and installations.
+      </p>
+    </div>
+  </div>
+
+  <!-- Nav dots must go _after_ all .service-card elements -->
+  <div class="carousel-nav-dots" id="carousel-nav-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Fixed Social Media Section -->
+  <section id="social-media" class="social-media-section">
+    <div class="social-media-wrapper">
+      <div class="social-title-box">
+        <h2>Social Media</h2>
+        <p>See what we’ve been up to lately</p>
+      </div>
+      <div class="social-embeds-new">
+        <!-- TikTok embeds… -->
+        <div class="tiktok-frame">
+  <div class="tiktok-border">
+    <iframe
+  src="https://www.tiktok.com/embed/7448768044131749151"
+  width="325"
+  height="700"
+  frameborder="0"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowfullscreen
+></iframe>
+  </div>
+</div>
+        <!-- (repeat for other videos) -->
+      </div>
+
+    <!-- Move this inside the section, right after wrapper -->
+ <div class="social-icons-bottom">
+  <a
+    href="https://www.tiktok.com/@rivshomeandlawncare" target="_blank" rel="noopener noreferrer"
+  >
+    <img src="assets/tiktok.png" alt="TikTok" />
+  </a>
+  <a
+    href="https://www.instagram.com/rivshomeandlawncare" target="_blank" rel="noopener noreferrer"
+  >
+    <img src="assets/instagram.png" alt="Instagram" />
+  </a>
+  <a
+    href="https://www.facebook.com/rivshomeandlawncare" target="_blank" rel="noopener noreferrer"
+  >
+    <img src="assets/facebook.png" alt="Facebook" />
+  </a>
+</div>
+
+  </section>
+
+
+
+  <!-- Coverage Area, Contact, Footer, etc. (all your original content) -->
+
+ <!-- About Us Section -->
+ <section id="about-us" class="about-us-section parallax-bg">
+  <div class="about-overlay">    
+    <h2>About Us</h2>
+    <p>Rivs Home is a professional home services provider in CT, USA. Our team is committed to deliver you the best home repair, installations and maintenance solutions to ensure your peace of mind in one of your most important assets. We take pride in our workmanship and strive to exceed customer expectations.</p>
+  </div>
+</section>
+
+<!-- Service Areas Section -->
+<section id="coverage-area" class="service-areas-section">
+<div class="overlay-background">
+  <div class="service-content">
+
+    <h2>Areas We Serve in CT</h2>
+
+    <!-- Desktop grid -->
+    <div class="towns-grid desktop-only">
+      <ul>
+        <li>ANSONIA</li><li>AVON</li><li>BERLIN</li><li>BETHEL</li><li>BOTSFORD</li>
+        <li>BRIDGEPORT</li><li>BROOKFIELD</li><li>CHESHIRE</li><li>COS COB</li><li>DANBURY</li>
+        <li>DARIEN</li><li>DERBY</li><li>EAST HAVEN</li><li>EASTON</li><li>FAIRFIELD</li>
+        <li>FARMINGTON</li><li>GEORGETOWN</li><li>GLASTONBURY</li><li>GREENS FARMS</li><li>GREENWICH</li>
+        <li>GUILFORD</li><li>HAMDEN</li>
+      </ul>
+      <ul>
+        <li>HARTFORD</li><li>HAWLEYVILLE</li><li>MANCHESTER</li><li>MERIDEN</li><li>MIDDLETON</li>
+        <li>MILFORD</li><li>MONROE</li><li>NEW BRITAIN</li><li>NEW CANAAN</li><li>NEW HAVEN</li>
+        <li>NEW LONDON</li><li>NEWINGTON</li><li>NEWTOWN</li><li>NORWALK</li><li>NORWICH</li>
+        <li>OLD GREENWICH</li><li>ORANGE</li><li>OXFORD</li><li>PLAINVILLE</li><li>REDDING</li>
+        <li>REDDING CENTER</li><li>REDDING RIDGE</li>
+      </ul>
+      <ul>
+        <li>RIDGEFIELD</li><li>RIVERSIDE</li><li>ROCKY HILL</li><li>SANDY HOOK</li><li>SEYMOUR</li>
+        <li>SHELTON</li><li>SOUTHBURY</li><li>SOUTHINGTON</li><li>SOUTHPORT</li><li>STAMFORD</li>
+        <li>STEVENSON</li><li>STRATFORD</li><li>TORRINGTON</li><li>TRUMBULL</li><li>UNIONVILLE</li>
+        <li>WATERBURY</li><li>WEST HARTFORD</li><li>WESTON</li><li>WESTPORT</li><li>WETHERSFIELD</li>
+        <li>WILTON</li><li>WOODBRIDGE</li>
+      </ul>
+    </div>
+
+    <!-- Mobile carousel for towns -->
+    <div class="mobile-towns-carousel-wrapper mobile-only">
+      <div class="mobile-towns-carousel">
+        <!-- Slide 1 -->
+        <div class="town-slide">
+          <ul class="town-list">
+            <li>ANSONIA</li><li>AVON</li><li>BERLIN</li><li>BETHEL</li><li>BOTSFORD</li>
+            <li>BRIDGEPORT</li><li>BROOKFIELD</li><li>CHESHIRE</li><li>COS COB</li><li>DANBURY</li>
+            <li>DARIEN</li><li>DERBY</li><li>EAST HAVEN</li><li>EASTON</li><li>FAIRFIELD</li>
+            <li>FARMINGTON</li><li>GEORGETOWN</li><li>GLASTONBURY</li><li>GREENS FARMS</li><li>GREENWICH</li>
+            <li>GUILFORD</li><li>HAMDEN</li>
+          </ul>
+        </div>
+        <!-- Slide 2 -->
+        <div class="town-slide">
+          <ul class="town-list">
+            <li>HARTFORD</li><li>HAWLEYVILLE</li><li>MANCHESTER</li><li>MERIDEN</li><li>MIDDLETON</li>
+            <li>MILFORD</li><li>MONROE</li><li>NEW BRITAIN</li><li>NEW CANAAN</li><li>NEW HAVEN</li>
+            <li>NEW LONDON</li><li>NEWINGTON</li><li>NEWTOWN</li><li>NORWALK</li><li>NORWICH</li>
+            <li>OLD GREENWICH</li><li>ORANGE</li><li>OXFORD</li><li>PLAINVILLE</li><li>REDDING</li>
+            <li>REDDING CENTER</li><li>REDDING RIDGE</li>
+          </ul>
+        </div>
+        <!-- Slide 3 -->
+        <div class="town-slide">
+          <ul class="town-list">
+            <li>RIDGEFIELD</li><li>RIVERSIDE</li><li>ROCKY HILL</li><li>SANDY HOOK</li><li>SEYMOUR</li>
+            <li>SHELTON</li><li>SOUTHBURY</li><li>SOUTHINGTON</li><li>SOUTHPORT</li><li>STAMFORD</li>
+            <li>STEVENSON</li><li>STRATFORD</li><li>TORRINGTON</li><li>TRUMBULL</li><li>UNIONVILLE</li>
+            <li>WATERBURY</li><li>WEST HARTFORD</li><li>WESTON</li><li>WESTPORT</li><li>WETHERSFIELD</li>
+            <li>WILTON</li><li>WOODBRIDGE</li>
+          </ul>
+        </div>
+      </div>
+      <div class="carousel-nav-dots towns-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <h3 class="county-title">Counties We Serve in CT</h3>
+
+    <!-- Desktop counties -->
+    <div class="counties-grid desktop-only">
+      <ul>
+        <li>FAIRFIELD COUNTY</li><li>HARTFORD COUNTY</li><li>LITCHFIELD COUNTY</li>
+      </ul>
+      <ul>
+        <li>MIDDLESEX COUNTY</li><li>NEW HAVEN COUNTY</li><li>NEW LONDON COUNTY</li>
+      </ul>
+      <ul>
+        <li>TOLLAND COUNTY</li><li>WINDHAM COUNTY</li>
+      </ul>
+    </div>
+
+    <!-- Mobile carousel for counties -->
+    <div class="mobile-towns-carousel-wrapper mobile-only">
+      <div class="mobile-towns-carousel">
+        <div class="town-slide">
+          <ul class="town-list">
+            <li>FAIRFIELD COUNTY</li><li>HARTFORD COUNTY</li><li>LITCHFIELD COUNTY</li>
+          </ul>
+        </div>
+        <div class="town-slide">
+          <ul class="town-list">
+            <li>MIDDLESEX COUNTY</li><li>NEW HAVEN COUNTY</li><li>NEW LONDON COUNTY</li>
+          </ul>
+        </div>
+        <div class="town-slide">
+          <ul class="town-list">
+            <li>TOLLAND COUNTY</li><li>WINDHAM COUNTY</li>
+          </ul>
+        </div>
+      </div>
+      <div class="carousel-nav-dots towns-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section-v2">
+  <h2>Contact Us</h2>
+
+  <a href="#contact" class="cta-button-v2">GET A FREE ESTIMATE!</a>
+
+  <div class="contact-grid">
+    <div class="contact-box">
+      <h3>Coverage Area</h3>
+      <p>CT, USA</p>
+    </div>
+    <div class="contact-box">
+      <h3>Call Us</h3>
+      <p><strong>860-999-6408</strong></p>
+    </div>
+    <div class="contact-box">
+      <h3>Follow Us</h3>
+      <div class="social-icons-v2">
+        <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="assets/tiktok.png" alt="TikTok" /></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 RIVS Home. All rights reserved.</p>
+</footer>
+
+<div id="chat-button">💬 AI Chat Assistant</div>
+<div id="chatbox">
+  <div id="chatbox-header">
+    Rivs Home Assistant
+    <span id="chatbox-close">&times;</span>
+  </div>
+  <div id="chatbox-messages">
+    <div class="message bot">Hi! How can I help you today?</div>
+  </div>
+  <div id="chatbox-input">
+    <input type="text" id="user-input" placeholder="Type your message…" />
+    <button id="chat-send">Send</button>
+  </div>
+</div>
+
+<!-- Discount Popup -->
+<div id="discount-popup" class="popup-overlay" style="display: none;">
+  <div class="popup-content">
+    <button class="close-btn" id="close-popup">&times;</button>
+    <img src="assets/discount-coupon.png" alt="Discount Coupon" class="coupon-img" />
+    <div class="cta-text">New Customers Only
+      <div class="cta-subtext">when you show a screenshot of this coupon</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- load your combined app.js -->
+<script src="app.js"></script>
+</body>
+</html>

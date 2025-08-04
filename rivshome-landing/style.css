@@ -1,0 +1,1819 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Consent disclaimer styling for estimate form */
+.consent-disclaimer {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .consent-disclaimer {
+    font-size: 13.5px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+/* ——— HERO: full-width, cover, hide overflow ——— */
+.hero {
+  background: url('assets/background.jpg') center center / cover no-repeat;
+  position: relative;
+  height: 85vh;
+  margin-top: 90px;   /* keeps it below your fixed navbar */
+  overflow: hidden;   /* hide any stray edges */
+}
+
+/* ——— OVERLAY: covers the hero area ——— */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+/* ——— HERO container ——— */
+.hero {
+  position: relative;
+  height: 85vh;
+  margin-top: 90px; /* below your fixed navbar */
+  overflow: hidden; /* hide any stray scrollbars */
+  background: url('assets/background.jpg') center center / cover no-repeat;
+}
+
+/* ——— OVERLAY as a vertical flex stack ——— */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* center vertically */
+  padding-left: 18%;         /* ← slide the entire block right by this % */
+}
+
+/* ——— STACKED CONTENT ——— */
+.overlay h1,
+.overlay .hero-subtitle,
+.overlay .hero-cta-container {
+  position: static;           /* let flex handle layout */
+  margin: 0;
+  text-align: left;           /* align to the overlay’s padding-left */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* title */
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+/* subtitle */
+.overlay .hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+/* CTA button wrapper */
+.overlay .hero-cta-container {
+  /* nothing needed here */
+}
+
+/* button styling */
+.overlay .hero-cta-container .cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #E1B23F;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.overlay .hero-cta-container .cta-button:hover {
+  background-color: #CF9E2B;
+}
+
+
+
+.overlay {
+  background-color: rgba(9, 107, 124, 0.);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #0077c0;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.service div {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+@media (max-width: 768px) {
+  .service {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.services-section {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #0077c0;
+}
+
+.services-section h2 {
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #0077c0;
+}
+
+.service {
+  background: #0077c0;
+  color: white;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.service {
+  background: #0077c0;
+  color: white;
+  padding: 15px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 350px;
+}
+
+.service-icon {
+  width: 95px;
+  height: 125px;
+  margin-bottom: 50px;
+  margin-top: -50px;
+  object-fit: contain;
+}
+
+.learn-more-btn {
+  
+  margin: 20px 0;
+  padding: 8px 16px;
+  background-color: #E1B23F;
+  color: #0077c0;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #e1b23f;
+  color: #fff;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-logo img {
+  margin-right: 0;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0077c0;
+}
+
+.hero {
+  margin-top: 90px; /* so content doesn't hide under navbar */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  width: auto;           /* ✅ don't stretch */
+  max-width: none;       /* ✅ remove 1400px constraint */
+}
+
+.nav-logo img {
+  margin-right: 0;
+  height: 50px; 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 0;
+  justify-content: flex-start;
+  
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0077c0;
+}
+
+.nav-contact {
+  margin-left: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+   /* 👈 Adjust spacing from nav items */
+}
+
+.nav-contact a {
+  text-decoration: none;
+  color: #0077c0;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: 2px solid #0077c0;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-contact a:hover {
+  background-color: #0077c0;
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  min-width: 180px;
+  padding: 10px 0;
+}
+
+.dropdown-menu li {
+  display: block;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #0077c0;
+  color: white;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.about-us-section {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.about-us-section h2 {
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 20px;
+}
+
+.about-us-section p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.parallax-bg {
+  background-image: url('assets/about-bg.jpg'); /* Change this to your actual image path */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.about-overlay {
+  background-color: rgba(0, 0, 0, 0.8); /* Optional overlay for readability */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-section-v2 {
+  background-color: #2f6da1;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.contact-section-v2 h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 20px;
+}
+
+.cta-button-v2 {
+  background-color: #e1b23f;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 60px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.cta-button-v2:hover {
+  background-color: #cf9e2b;
+}
+
+/* ——— Contact “cards” styling ——— */
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;           /* tighten up from 80px if you like */
+  flex-wrap: wrap;
+  margin-top: 40px;    /* reset that -25px if needed */
+  align-items: stretch;
+}
+
+.contact-box {
+  background: #2d629ef8;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 0 1 280px;     /* each card will be up to 280px wide */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ← this moves children to the horizontal center */
+  text-align: center;    /* ← in case you have inline elements */
+  justify-content: center; /* optional: vertically center if you like */
+}
+
+.contact-box h3 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.contact-box p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* If you want all three cards to be equal height: */
+.contact-grid {
+  align-items: stretch;
+}
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-icons-v2 img {
+  width: 30px;
+  margin: 0 8px;
+  transition: transform 0.2s;
+}
+
+.social-icons-v2 img:hover {
+  transform: scale(1.1);
+}
+
+.social-media-section {
+  background-color: #0077c0;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+  background-color: #0077c0;
+  color: white;
+}
+
+.form-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.form-hero p {
+  font-size: 1.2rem;
+}
+
+.estimate-form-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.estimate-form {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.estimate-form label {
+  font-weight: bold;
+}
+
+.estimate-form input,
+.estimate-form select,
+.estimate-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.estimate-form button.cta-button {
+  background-color: #e1b23f;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.estimate-form button.cta-button:hover {
+  background-color: #cf9e2b;
+}
+
+.thank-you-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #0077c0;
+  color: white;
+}
+
+.thank-you-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.thank-you-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.thank-you-hero .cta-button {
+  background-color: #e1b23f;
+  color: #000;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+.thank-you-hero .cta-button:hover {
+  background-color: #cf9e2b;
+}
+
+.thank-you-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #0077c0;
+  color: white;
+}
+
+.thank-you-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.thank-you-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.thank-you-hero .cta-button {
+  background-color: #e1b23f;
+  color: #000;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+.thank-you-hero .cta-button:hover {
+  background-color: #cf9e2b;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.centered-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.social-embeds-new {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* prevent wrapping to a new line */
+  gap: 40px;
+  margin-top: 100px;
+  overflow-x: auto; /* optional: enables horizontal scroll on small screens */
+}
+
+
+.tiktok-frame {
+  background-color: #0d6da1;
+  border-radius: 40px;
+  padding: 20px;
+  width: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tiktok-border {
+  background-color: #f7c53c;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.tiktok-embed {
+  border-radius: 15px;
+}
+
+
+.social-embeds-new {
+  margin-top: 100px; /* 👈 Adjust this value as needed */
+}
+
+
+
+
+
+.social-media-wrapper {
+  border: 3px solid #f7c53c;
+  border-radius: 40px;
+  padding: 100px 20px;
+  margin: 0 auto 60px;
+  max-width: 1300px;
+  background-color: #0077c0;
+
+  /* 👇 Dot background added */
+  background-image: radial-gradient(#2d629e 1px, transparent 0px);
+  background-size: 20px 20px;
+}
+
+
+.social-title-box h2 {
+  font-size: 4.5rem;
+  margin: 0 0 5px;
+  color: white;
+  text-shadow:
+    2px 2px 6px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.3); /* adds outer glow effect */
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.social-title-box p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 10px 0 0;
+  text-shadow:
+    1px 1px 3px rgba(0, 0, 0, 0.6),
+    0 0 6px rgba(255, 255, 255, 0.2);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.social-icons-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.social-icons-bottom img {
+  width: 35px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons-bottom img:hover {
+  transform: scale(1.15);
+}
+
+.social-title-box {
+  padding: 20px 40px;
+  width: fit-content; /* or set a max-width if needed */
+  margin: 0 auto; /* center horizontally */
+  border-radius: 30px;
+  background-color: #2d629e(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px #2d629e(255, 255, 255, 0.5);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-title-box {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.social-title-box.animate-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-overlay {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-overlay.animate-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-section,
+.services-section .section-description,
+.services-section .service {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+
+/* Service Area Section */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.service-areas-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.overlay-background {
+  background-image: radial-gradient(#0077cc 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 60px 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.service-content {
+  /* make it fill 90% of its container, then cap at 900px */
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;               /* center horizontally */
+  background-color: #2d629ef8;
+  border-radius: 20px;
+  padding: 40px 300px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* keep your flex centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-areas-section h2,
+.county-title {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* —— Centered three-column grid layout —— */
+.towns-grid,
+.counties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 8px 250px;           /* 8px between rows, 40px between columns */
+  width: fit-content;      /* grid only as wide as its columns */
+  margin: 0 0 40px;        /* bottom spacing; horizontal centering via flex */
+  text-align: left;
+}
+
+.towns-grid ul,
+.counties-grid ul {
+  margin: 0;
+  padding: 0;
+}
+
+.towns-grid li,
+.counties-grid li {
+  list-style: none;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+
+  .mobile-logo img {
+    height: 40px;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    padding-top: 80px;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Hide navbar when mobile menu is open */
+  body.menu-open .navbar {
+    display: none !important;
+  }
+
+  .mobile-menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .mobile-menu-header img {
+    height: 50px;
+  }
+
+  .mobile-menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 80%;
+  }
+
+  .mobile-menu-links li a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .mobile-menu-links li a i {
+    font-size: 1.6rem;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Mobile Hero and Header Fixes */
+@media (max-width: 768px) {
+  .hero {
+    height: 75vh !important;  /* 👈 this forces it */
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    position: relative;
+    overflow: hidden !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .overlay {
+    width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin: 0 0 15px;
+    padding: 0 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-cta-container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-button.hero-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+  }
+
+  .mobile-logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mobile-logo img {
+    height: 40px;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 15px;
+    color: #000;
+    z-index: 300;
+  }
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 300;
+}
+
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+  }
+
+  .mobile-logo {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .mobile-logo img {
+    height: 40px;
+  }
+
+  .burger-placeholder,
+  .hamburger {
+    width: 50px;
+    text-align: center;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+    z-index: 300;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-shadow:
+      2px 2px 0 #000,
+      4px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    padding: 0 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    position: relative;
+  }
+
+  .overlay {
+    width: 100%;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.1rem;
+    margin: 10px 0 !important;
+    padding: 0 10px;
+    text-indent: 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-cta-container {
+    margin-left: 0 !important;
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .cta-button.hero-btn {
+    font-size: 1.1rem;
+    padding: 14px 26px;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 65vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .overlay {
+    width: 100%;
+    padding: 20px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin: 0 0 15px;
+    padding: 0 10px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  }
+
+  .hero-cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .cta-button.hero-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+  }
+}
+
+/* Floating Chat Styles */
+#chat-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #E1B23F;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+#chatbox {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 300px;
+  max-height: 400px;
+  background: white;
+  border: 2px solid #0077c0;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+#chatbox-header {
+  background: #0077c0;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#chatbox-close {
+  cursor: pointer;
+}
+#chatbox-messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f9f9f9;
+}
+#chatbox-input {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+}
+#chatbox-input input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+#chatbox-input button {
+  background-color: #0077c0;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.message {
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 80%;
+}
+.message.bot {
+  background-color: #e1b23f;
+  color: #fff;
+  align-self: flex-start;
+}
+.message.user {
+  background-color: #0077c0;
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* ————— GLOBAL HELPERS ————— */
+.desktop-only { display: block; }
+.mobile-only  { display: none; }
+
+/* ————— MOBILE OPTIMIZATION: “Areas We Serve” ————— */
+@media (max-width: 768px) {
+  /* hide desktop grids */
+  .towns-grid,
+  .counties-grid {
+    display: none !important;
+  }
+
+  /* show mobile carousels */
+  .mobile-only,
+  .mobile-towns-carousel-wrapper {
+    display: block !important;
+  }
+
+  /* carousel wrapper (for dots) */
+  .mobile-towns-carousel-wrapper {
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* the horizontal scroller */
+  .mobile-towns-carousel {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 20px !important;
+    padding: 0 !important;                     /* remove side padding */
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* each slide panel, centered in viewport */
+  .town-slide {
+    box-sizing: border-box;                     /* include padding in width */
+    flex: 0 0 80vw !important;                  /* 80% of viewport */
+    margin: 0 10vw !important;                  /* center via equal side margins */
+    scroll-snap-align: center !important;       /* snap cards to center */
+    background-color: #0076c0;
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  /* list styling inside slides */
+  .town-slide .town-list {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    column-count: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+  }
+
+  /* nav‐dots under the carousel */
+  .carousel-nav-dots.towns-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    pointer-events: none;
+  }
+  .carousel-nav-dots.towns-dots .dot {
+    width: 8px;
+    height: 8px;
+    background: #b0d0e8;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  .carousel-nav-dots.towns-dots .dot.active {
+    background: #E1B23F;
+  }
+
+  /* shrink service-content padding so carousel spans full width */
+  .service-areas-section .service-content {
+    padding: 40px 20px !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box;
+    display: block !important;
+  }
+}
+
+/* ————— DESKTOP OVERRIDES ————— */
+@media (min-width: 769px) {
+  /* restore desktop grids */
+  .towns-grid,
+  .counties-grid {
+    display: grid !important;
+  }
+  /* hide mobile-only wrappers */
+  .mobile-only,
+  .mobile-towns-carousel-wrapper {
+    display: none !important;
+  }
+}
+
+
+/* ————— MOBILE SERVICE CAROUSEL FIX ————— */
+@media (max-width: 768px) {
+  /* 1) Hide the desktop grid of services */
+  .services {
+    display: none !important;
+  }
+
+  /* 2) Show and reset the mobile carousel wrapper */
+  .mobile-carousel-wrapper {
+    display: block !important;
+    position: relative;
+    /* no more negative margin */
+    margin: 0 !important;
+    /* small top padding so it sits below your mobile-header */
+    padding: 20px 0 40px !important;
+    box-sizing: border-box;
+    overflow: visible !important;
+  }
+
+  /* 3) Give the whole section room under the fixed header */
+  .services-section {
+    padding-top: 80 !important; /* we’re handling spacing in the wrapper */
+  }
+
+  /* 4) Style the actual scroller */
+  .mobile-carousel {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 20px !important;
+    padding: 0 10px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 5) Each card stays about 70% of the viewport width */
+  .service-card {
+    flex: 0 0 70vw !important;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    min-height: 100px;
+    background-color: #2d629e !important;
+    color: white !important;
+    border-radius: 16px !important;
+    padding: 40px 20px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* 6) Dot nav stays pinned under the cards */
+  .carousel-nav-dots {
+    position: absolute !important;
+    bottom: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    gap: 8px !important;
+    pointer-events: none;
+  }
+  .carousel-nav-dots .dot {
+    width: 8px; height: 8px;
+    background: #b0d0e8;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  .carousel-nav-dots .dot.active {
+    background: #E1B23F;
+  }
+  .service-card img,
+  .service-card .service-icon {
+    margin-top: 0 !important;
+    display: block;
+  }
+}
+
+/* Hide the mobile carousel on desktop again */
+@media (min-width: 769px) {
+  .mobile-carousel-wrapper,
+  .mobile-carousel {
+    display: none !important;
+  }
+  .services {
+    display: flex !important; /* restore your desktop grid */
+    scroll-margin-top: 80px;
+  }
+}
+
+/* counties */
+
+@media (max-width: 768px) {
+  /* 1) Show a centered vertical list of counties with the same typography as the city slides */
+  .counties-grid {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 auto 40px !important;  /* bottom spacing under the list */
+    width: auto !important;           /* shrink to fit widest item */
+    gap: 8px;                         /* space between each row */
+    box-sizing: border-box;
+  }
+
+  /* Make each list shrinkwrap and center its text */
+  .counties-grid ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto;
+  }
+
+  .counties-grid li {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    text-align: center;
+    font-size: 0.9rem;    /* match your other mobile font size */
+    line-height: 1.5;
+    color: #ffffff;
+  }
+
+  /* 2) Hide the old counties carousel wrapper */
+  .counties-grid + .mobile-towns-carousel-wrapper {
+    display: none !important;
+  }
+}
+
+/* ————— NAVBAR SWITCHOVER FIX ————— */
+
+/* 1) On small screens, hide the desktop navbar */
+@media (max-width: 768px) {
+  .navbar {
+    display: none !important;
+  }
+}
+
+/* 2) On larger screens, hide the mobile header & mobile menu */
+@media (min-width: 769px) {
+  .mobile-header,
+  .mobile-menu {       /* this targets the full‐screen menu pane */
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1) Fixed header bar (logo & hamburger) */
+  .mobile-header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 56px;               /* your header height */
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  /* 2) CTA bar directly below, same width, no overflow */
+  .mobile-header-ctas {
+    position: fixed;
+    top: 56px;                  /* header’s height */
+    left: 0; width: 100%;
+    height: 56px;               /* CTA bar height */
+    background: #2f6da1;
+    display: flex;
+    justify-content: space-between; /* push buttons to edges */
+    gap: 0.5rem;
+    padding: 0 1rem;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+  }
+  .mobile-header-ctas .cta-button {
+    flex: none;                 /* disable flex-grow */
+    width: calc(50% - 0.5rem);  /* two buttons, minus the gap */
+    padding: 0.5rem 0;          /* trim vertical padding */
+    font-size: 0.95rem;         /* slightly smaller text */
+  }
+
+  /* 3) Push page content below the two bars */
+  body {
+    padding-top: 112px !important; /* 56px + 56px */
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-header-ctas .cta-button {
+    display: flex;            /* turn on flexbox */
+    align-items: center;      /* vertical centering */
+    justify-content: center;  /* horizontal centering */
+    text-align: center;       /* fallback for inline text */
+  }
+}
+
+@media (max-width: 768px) {
+  /* kill the desktop-only hero offset so the image sits flush under the CTAs */
+  .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  /* hide header/nav when mobile menu is open */
+body.menu-open .mobile-header,
+body.menu-open .mobile-header-ctas,
+body.menu-open .navbar {
+  display: none !important;
+}
+
+}
+
+/* New settings for the top tittle on mobile */
+
+@media (max-width: 768px) {
+  /* …your current mobile rules… */
+
+  /* 1) Disable desktop absolute centering on mobile */
+  .hero h1,
+  .hero-subtitle,
+  .hero-cta-container {
+    position: static !important;    /* let them flow in the mobile flex/.overlay */
+    top: auto !important;           /* undo any top: 40%,50%,60% */
+    left: auto !important;          /* undo the desktop --hero-center-x */
+    transform: none !important;     /* remove translateX(-50%) */
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .hero h1, .hero-subtitle, .hero-cta-container {
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh !important;
+    min-height: 350px !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;   /* <-- this is the key! */
+    align-items: center !important;
+    position: relative;
+    overflow: hidden !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .overlay {
+    justify-content: flex-end !important;   /* <-- this is the key! */
+    padding-top: 0 !important;
+    padding-bottom: 64px !important; /* or even 80px for more space */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh !important;
+    min-height: 400px !important;
+  }
+  .overlay {
+    justify-content: flex-end !important;
+    padding-top: 0 !important;
+    padding-bottom: 1500px !important; /* Try 96px or 120px for more space */
+  }
+  .overlay > *:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-cta-container .cta-button {
+    margin-bottom: 32px !important; /* Increase this value for more space */
+  }
+}
+
+/* --- Discount Popup Styles --- */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.popup-content {
+  background: #e1b33ff1;
+  border-radius: 16px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  text-align: center;
+  position: relative;
+  max-width: 90vw;
+  width: 350px;
+}
+.coupon-img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 12px;
+  margin-top: -60px;
+  display: block;
+  border-radius: 8px;
+}
+.close-btn {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.cta-text {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-top: -75px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.cta-subtext {
+  font-size: 0.95rem;
+  color: #dbd9d9;
+  margin-top: 4px;
+  font-weight: normal;
+}
+@media (max-width: 500px) {
+  .popup-content {
+    width: 95vw;
+    padding: 12px 4vw;
+  }
+  .coupon-img {
+    max-width: 100vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

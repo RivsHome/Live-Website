@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leave Us a Review</title>
+  <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+
+      <!-- Mobile Menu Button -->
+<div class="mobile-header">
+    <div class="burger-placeholder"></div>
+  
+    <div class="mobile-logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="RIVS Logo" />
+      </a>
+    </div>
+  
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+  
+  <!-- CTAs below the header -->
+  <div class="mobile-header-ctas">
+    <a href="free-estimate.html" class="cta-button">Free Estimate</a>
+    <a href="tel:+18609996408" class="cta-button">Call Us</a>
+  </div>
+  
+    <!-- Full-Screen Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="index.html"><img src="assets/logo.png" alt="RIVS Logo" /></a>
+        <div class="mobile-menu-close" onclick="toggleMenu()">✕</div>
+      </div>
+      <ul class="mobile-menu-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="index.html#about-us"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="index.html#services"><i class="fas fa-tools"></i> Services</a></li>
+        <li><a href="index.html#coverage-area"><i class="fas fa-map-marker-alt"></i> Coverage Area</a></li>
+        <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+      </ul>
+    </div>
+  
+    <!-- Desktop Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html"><img src="assets/logo.png" alt="RIVS Logo" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="index.html#services">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="plumbing.html">Plumbing</a></li>
+              <li><a href="handyman.html">Handyman</a></li>
+              <li><a href="sprinklers.html">Sprinkler System</a></li>
+              <li><a href="gutters.html">Gutter Services</a></li>
+              <li><a href="electrical.html">Electrical</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#about-us">About</a></li>
+          <li><a href="index.html#coverage-area">Coverage Area</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-contact">
+          <a href="tel:+18609996408">(860) 999-6408</a>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Curved Header -->
+  <header class="reviews-header">
+    <div class="header-content">
+      <h1>Leave Us a Review</h1>
+    </div>
+  </header>
+
+  <!-- Buttons Section -->
+  <section class="reviews-section">
+    <!-- Centered, max-width wrapper -->
+    <div class="inner-container">
+      <div class="buttons-container">
+
+        <a href="https://www.yelp.com/writeareview/biz/_If9tyfZB9uvwn5dUE8Tmg?review_origin=review-feed-war-widget"
+           target="_blank"
+           class="review-button yelp">
+           <img src="images/yelp-icon.png" alt="Yelp" class="btn-icon"/>
+          <span>Leave a Review on Yelp</span>
+        </a>
+
+        <a href="https://www.facebook.com/RivsHomeAndLawnCare/reviews"
+           target="_blank"
+           class="review-button facebook">
+           <img src="images/facebook-icon.png" alt="Facebook" class="btn-icon"/>
+          <span>Leave a Review on Facebook</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
